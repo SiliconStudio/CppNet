@@ -50,7 +50,7 @@ namespace CppNet
             } catch(LexerException e) {
                 throw new IllegalStateException(e);
             } catch(IOException e) {
-                throw new ApplicationException("",e);
+                throw new Exception("",e);
             }
         }
 
