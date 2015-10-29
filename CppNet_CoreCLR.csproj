@@ -10,7 +10,7 @@
     <RootNamespace>CppNet</RootNamespace>
     <AssemblyName>CppNet</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkRootPath>$(SolutionDir)\CoreFX\</TargetFrameworkRootPath>
+    <TargetFrameworkRootPath>$(MSBuildThisFileDirectory)\CoreFX\</TargetFrameworkRootPath>
     <FrameworkPathOverride>$(TargetFrameworkRootPath)\CoreCLR\v5.0</FrameworkPathOverride>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
