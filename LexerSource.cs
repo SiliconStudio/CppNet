@@ -17,6 +17,7 @@
 using System;
 using System.IO;
 using System.Text;
+using System.Globalization;
 
 namespace CppNet {
 
@@ -33,7 +34,7 @@ public class LexerSource : Source {
         return c >= 0 && c <= 8 ||
             c >= 0xE && c <= 0x1B ||
             c >= 0x7F && c <= 0x9F ||
-            char.GetUnicodeCategory((char)c) == System.Globalization.UnicodeCategory.Format;
+            CharUnicodeInfo.GetUnicodeCategory((char)c) == UnicodeCategory.Format;
     }
 
     static int digit(char ch, int radix)

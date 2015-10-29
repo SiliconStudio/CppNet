@@ -191,7 +191,7 @@ namespace CppNet
             if(_in == null) {
                 return;
             }
-            _in.Close();
+            _in.Dispose();
         }
 
 
