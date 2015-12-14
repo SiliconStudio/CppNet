@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C2FD9262-69F8-4B75-9AB1-FF359C9143E9}</ProjectGuid>
+    <ProjectGuid>{197C3819-9942-408D-AFBC-951FA7A69259}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CppNet</RootNamespace>
