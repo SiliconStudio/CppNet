@@ -15,6 +15,7 @@
  * permissions and limitations under the License.
  */
 using System;
+using System.Diagnostics;
 
 namespace CppNet
 {
@@ -34,7 +35,7 @@ namespace CppNet
 
         protected void print(String msg)
         {
-            System.Console.Error.WriteLine(msg);
+            Debug.WriteLine(msg);
         }
 
         public override void handleWarning(Source source, int line, int column, string msg)

@@ -19,6 +19,7 @@ using System;
 using System.Text;
 using System.Collections.Generic;
 using System.IO;
+using System.Diagnostics;
 
 namespace CppNet {
 
@@ -521,7 +522,7 @@ public class Preprocessor : IDisposable {
             Token tok = _source_token;
             _source_token = null;
 			if (getFeature(Feature.DEBUG))
-				System.Console.Error.WriteLine("Returning unget token " + tok);
+				Debug.WriteLine("Returning unget token " + tok);
 			return tok;
 		}
 
@@ -554,7 +555,7 @@ public class Preprocessor : IDisposable {
 				continue;
 			}
 			if (getFeature(Feature.DEBUG))
-				System.Console.Error.WriteLine("Returning fresh token " + tok);
+				Debug.WriteLine("Returning fresh token " + tok);
 			return tok;
 		}
 	}
@@ -1011,7 +1012,7 @@ public class Preprocessor : IDisposable {
         BREAK_EXPANSION:
 
 		if (getFeature(Feature.DEBUG))
-			System.Console.Error.WriteLine("Defined macro " + m);
+			Debug.WriteLine("Defined macro " + m);
 		addMacro(m);
 
 		return tok;	/* Token.NL or Token.EOF. */
@@ -1057,7 +1058,7 @@ public class Preprocessor : IDisposable {
             }
 
             if(getFeature(Feature.DEBUG))
-                System.Console.WriteLine("pp: including " + file);
+                Debug.WriteLine("pp: including " + file);
 
             push_source(file.getSource(), true);
         }
@@ -1910,7 +1911,7 @@ public class Preprocessor : IDisposable {
                     Macro m;
                     macros.TryGetValue(tok.getText(), out m);
                     if(tok.getText() == "__has_include_next") {
-                        Console.WriteLine();
+                        Debug.WriteLine("");
                     }
 					if (m == null)
 						return tok;
@@ -2165,7 +2166,7 @@ public class Preprocessor : IDisposable {
 	public Token token() {
 		Token	tok = _token();
 		if (getFeature(Feature.DEBUG))
-			System.Console.Error.WriteLine("pp: Returning " + tok);
+			Debug.WriteLine("pp: Returning " + tok);
 		return tok;
 	}
 

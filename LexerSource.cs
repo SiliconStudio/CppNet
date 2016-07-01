@@ -18,6 +18,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Globalization;
+using System.Diagnostics;
 
 namespace CppNet {
 
@@ -599,7 +600,7 @@ public class LexerSource : Source {
 						tok = new Token(Token.NL, _l, _c, new String(text));
 					}
 					if (DEBUG)
-						System.Console.Error.WriteLine("lx: Returning NL: " + tok);
+						Debug.WriteLine("lx: Returning NL: " + tok);
 					return tok;
 				}
 				/* Let it be handled as whitespace. */
@@ -808,7 +809,7 @@ public class LexerSource : Source {
 
 		tok.setLocation(_l, _c);
 		if (DEBUG)
-			System.Console.WriteLine("lx: Returning " + tok);
+			Debug.WriteLine("lx: Returning " + tok);
 		// (new Exception("here")).printStackTrace(System.out);
 		return tok;
 	}
