@@ -49,6 +49,8 @@ namespace CppNet
                     tok = source.token();
             } catch(LexerException e) {
                 throw new IllegalStateException(e);
+            } catch(IOException e) {
+                throw new Exception("",e);
             }
         }
 
@@ -91,6 +93,4 @@ namespace CppNet
             throw new NotSupportedException();
         }
     }
-
-
 }

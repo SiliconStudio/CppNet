@@ -1,4 +1,5 @@
 project.lock.json
 .vs/
 bin/
+Bin/
 obj/
