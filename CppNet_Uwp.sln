@@ -10,6 +10,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		CppNetShared.projitems*{8d8a8527-a2a6-494e-8d19-7bb23cbb7bc8}*SharedItemsImports = 13
+		CppNetShared.projitems*{c2fd9262-69f8-4b75-9ab1-ff359c9143e9}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
