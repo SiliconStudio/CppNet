@@ -123,7 +123,9 @@ public class Preprocessor : IDisposable {
 		this.frameworkspath = new List<String>();
 		this.features = Feature.NONE;
 		this.warnings = Warning.NONE;
+#if !WINDOWS_STORE
 		this.filesystem = new JavaFileSystem();
+#endif
 		this.listener = null;
 	}
 
@@ -132,12 +134,14 @@ public class Preprocessor : IDisposable {
 		addInput(initial);
 	}
 
+#if !WINDOWS_STORE
 	/** Equivalent to
 	 * 'new Preprocessor(new {@link FileLexerSource}(file))'
 	 */
 	public Preprocessor(FileInfo file) :
 		this(new FileLexerSource(file)) {
 	}
+#endif
 
 	/**
 	 * Sets the VirtualFileSystem used by this Preprocessor.
@@ -250,6 +254,7 @@ public class Preprocessor : IDisposable {
 		inputs.Add(source);
 	}
 
+#if !WINDOWS_STORE
 	/**
 	 * Adds input for the Preprocessor.
 	 *
@@ -258,6 +263,7 @@ public class Preprocessor : IDisposable {
 	public void addInput(FileInfo file) {
 		addInput(new FileLexerSource(file));
 	}
+#endif
 
 
 	/**

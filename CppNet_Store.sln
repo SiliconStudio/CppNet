@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CppNet_Uwp", "CppNet_Uwp.csproj", "{C2FD9262-69F8-4B75-9AB1-FF359C9143E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CppNet_Store", "CppNet_Store.csproj", "{C2FD9262-69F8-4B75-9AB1-FF359C9143E9}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CppNetShared", "CppNetShared.shproj", "{8D8A8527-A2A6-494E-8D19-7BB23CBB7BC8}"
 EndProject
